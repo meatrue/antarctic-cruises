@@ -13,9 +13,16 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 $color-neon-blue:                   #2c39f2;
 $color-torch-red:                   #ff1553;
 
+$color-base-dark:                   #011c40;
+$color-base-light:                  #f9fbfd;
+$color-base-grey:                   #d8d8d9;
+$color-bg-additional-light:         #d9e6f4;
+$color-shadow:                      rgba(0, 0, 0, 0.25);
+
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+
 
 // Typography
 // ---------------------------------
@@ -23,11 +30,32 @@ $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0
 // переменная используемая в html для подключения скейлинга
 $fz-default:                        16px;
 
+// Font-sizes
+$fz-base:                           16px;
+$fz-base-large:                     18px;
+$fz-base-small:                     14px;
+
+$fz-title-large-desktop:            54px;
+$fz-title-medium-desktop:           28px;
+$fz-title-small-desktop:            18px;
+$fz-title-form-desktop:             40px;
+
+$fz-title-large-tablet:             50px;
+$fz-title-medium-tablet:            26px;
+$fz-title-small-tablet:             18px;
+$fz-title-form-tablet:              34px;
+
+$fz-title-large-mobile:             36px;
+$fz-title-medium-mobile:            24px;
+$fz-title-small-mobile:             18px;
+$fz-title-form-mobile:              34px;
+
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
 
 $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+$ff-base:                           "Montserrat", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
@@ -39,6 +67,16 @@ $trans-default:                     0.3s $tf-default;
 $trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
 
 $trans-600:                         0.6s $tf-default;
+
+//Paddings
+$page-padding-desktop:              40px;
+$page-padding-tablet:               45px;
+$page-padding-mobile:               15px;
+
+// Content width
+// ---------------------------------
+$max-content-width:                 1160px;
+$min-content-width:                 290px;
 
 // Viewports
 // ---------------------------------

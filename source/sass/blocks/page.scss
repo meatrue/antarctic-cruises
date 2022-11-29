@@ -1,0 +1,64 @@
+.page {
+  font-family: $ff-base;
+  font-size: $fz-base;
+  line-height: 1.5;
+  color: $color-base-dark;
+}
+
+.page__body {
+  background-color: $color-base-light;
+
+  h1 {
+    font-size: $fz-title-large-desktop;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: $fz-title-medium-desktop;
+    line-height: 1.5;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: $fz-title-small-desktop;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  @include vp-1023 {
+    h1 {
+      font-size: $fz-title-large-tablet;
+    }
+
+    h2 {
+      font-size: $fz-title-medium-tablet;
+    }
+
+    h3 {
+      font-size: $fz-title-small-tablet;
+    }
+  }
+
+  @include vp-767 {
+    h1 {
+      font-size: $fz-title-large-mobile;
+      line-height: 1.25;
+    }
+
+    h2 {
+      font-size: $fz-title-medium-mobile;
+    }
+
+    h3 {
+      font-size: $fz-title-small-mobile;
+    }
+  }
+}
+
+.page__wrapper {
+  min-width: $min-content-width;
+  max-width: $max-content-width;
+  margin: 0 auto;
+}
+
