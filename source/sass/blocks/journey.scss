@@ -1,0 +1,74 @@
+.journey {
+  padding: 120px $page-padding-desktop 145px;
+
+  @include vp-1023 {
+    padding: 100px $page-padding-tablet;
+  }
+
+  @include vp-767 {
+    padding: 65px $page-padding-mobile 85px;
+  }
+}
+
+.journey__wrapper {
+  display: flex;
+  align-items: center;
+
+  @include vp-1023 {
+    align-items: flex-start;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.journey__description {
+  margin-right: 88px;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @include vp-1023 {
+    margin-right: 25px;
+
+    h2 {
+      margin-bottom: 30px;
+      padding-right: 60px;
+      line-height: 1.4;
+    }
+  }
+
+  @include vp-767 {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.journey__image {
+  min-width: 560px;
+  min-height: 301px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @include vp-1023 {
+    min-width: 324px;
+    min-height: 174px;
+  }
+
+  @include vp-767 {
+    min-width: 290px;
+    min-height: 156px;
+  }
+}

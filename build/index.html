@@ -19,34 +19,54 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
-    <header class="page__header header">
-      <div class="page__wrapper">
-        <div class="header__navigation-wrapper">
-          <a class="header__logo logo">
-            <svg class="logo__image" width="70" height="38" fill="#f9fbfd" role="img" aria-hidden="true" focusable="false" alt="Круизы  в Антарктику.">
-              <use xlink:href="./img/sprite.svg#logo"></use>
-            </svg>
-          </a>
+    <header class="page__header header header--navigation-nojs">
+      <div class="page__wrapper header__wrapper">
+        <a class="header__logo logo">
+          <svg class="logo__image" width="70" height="38" fill="#f9fbfd" role="img" aria-hidden="true" focusable="false" alt="Круизы  в Антарктику.">
+            <use xlink:href="./img/sprite.svg#logo"></use>
+          </svg>
+        </a>
 
-          <nav class="header__navigation navigation">
-            <a class="navigation__link" href="#">Преимущества</a>
-            <a class="navigation__link" href="#">Направления</a>
-            <a class="navigation__link" href="#">Ближайшие круизы</a>
-            <a class="navigation__link" href="#">Контакты</a>
-          </nav>
-        </div>
+        <nav class="header__navigation navigation navigation--header">
+          <a class="navigation__link" href="#">Преимущества</a>
+          <a class="navigation__link" href="#">Направления</a>
+          <a class="navigation__link" href="#">Ближайшие круизы</a>
+          <a class="navigation__link" href="#">Контакты</a>
+        </nav>
 
-        <section class="promo">
-          <h1 class="promo__title">Круизы в Антарктику</h1>
-          <p>Волшебный мир айсбергов и пингвинов</p>
-        </section>
+        <button class="header__navigation-toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
       </div>
     </header>
+
     <main>
+      <section class="promo">
+        <div class="page__wrapper promo__wrapper">
+          <h1 class="promo__title">Круизы в&nbsp;Антарктику</h1>
+          <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
+        </div>
+      </section>
+
       <section class="journey">
-        <h2 class="journey__title">Путешествие на край Земли</h2>
-        <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
-        <img src="" alt="Пингвины идут по снежному склону.">
+        <div class="page__wrapper journey__wrapper">
+          <div class="journey__description">
+            <h2>Путешествие на&nbsp;край Земли</h2>
+            <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+          </div>
+
+          <div class="journey__image">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="./img/pinguins-desktop.webp 1x, ./img/pinguins-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/pinguins-tablet.webp 1x, ./img/pinguins-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/pinguins-mobile.webp 1x, ./img/pinguins-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1024px)" srcset="./img/pinguins-desktop.jpg 1x, ./img/pinguins-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/pinguins-tablet.jpg 1x, ./img/pinguins-tablet@2x.jpg 2x">
+              <img src="./img/pinguins-mobile.jpg" srcset="./img/pinguins-mobile@2x.jpg 2x" width="290" height="156" alt="Пингвины идут по снежному склону.">
+            </picture>
+          </div>
+        </div>
       </section>
 
       <section class="advantages">
@@ -277,26 +297,28 @@
             <use xlink:href="./img/sprite.svg#logo"></use>
           </svg>
         </a>
+
         <div class="footer__navigation navigation">
           <a class="navigation__link" href="#">Преимущества</a>
           <a class="navigation__link" href="#">Направления</a>
           <a class="navigation__link" href="#">Ближайшие круизы</a>
           <a class="navigation__link" href="#">Контакты</a>
         </div>
-        <div class="footer__social">
+
+        <div class="footer__social-list">
           <a class="footer__social-link" href="#">
-            <svg class="footer__social-icon" width="12" height="20" fill="#f9fbfd" role="img" aria-hidden="true" focusable="false" alt="Круизы  в Антарктику.">
+            <svg class="footer__social-icon footer__social-icon--ok" width="12" height="20" fill="#f9fbfd" role="img" aria-hidden="true" focusable="false" alt="Круизы  в Антарктику.">
               <use xlink:href="./img/sprite.svg#ok"></use>
             </svg>
             <span class="visually-hidden">Мы в Одноклассниках.</span>
           </a>
           <a class="footer__social-link" href="#">
-            <svg class="footer__social-icon" width="20" height="20" fill="#f9fbfd" role="img" aria-hidden="true" focusable="false" alt="Круизы  в Антарктику.">
+            <svg class="footer__social-icon footer__social-icon--zen" width="20" height="20" fill="#f9fbfd" role="img" aria-hidden="true" focusable="false" alt="Круизы  в Антарктику.">
               <use xlink:href="./img/sprite.svg#zen"></use>
             </svg>
             <span class="visually-hidden">Мы в Яндекс Дзен.</span>
           </a>
-          <a class="footer__social-link" href="#">
+          <a class="footer__social-link footer__social-icon--reddit" href="#">
             <svg class="footer__social-icon" width="20" height="20" fill="#f9fbfd" role="img" aria-hidden="true" focusable="false" alt="Круизы  в Антарктику.">
               <use xlink:href="./img/sprite.svg#reddit"></use>
             </svg>

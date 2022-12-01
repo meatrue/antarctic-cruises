@@ -1,7 +1,105 @@
 .footer {
+  padding: 50px $page-padding-desktop;
   background-color: $color-base-dark;
+
+  @include vp-1023 {
+    padding: 50px $page-padding-tablet;
+  }
+
+
+  @include vp-767 {
+    padding: 40px $page-padding-mobile;
+  }
 }
 
 .footer__wrapper {
   display: flex;
+  align-items: flex-start;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.footer__logo {
+  margin-right: 7px;
+
+  @include vp-1023 {
+    margin-right: 2px;
+  }
+}
+
+.footer__navigation {
+  flex-grow: 1;
+  margin-top: 13px;
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
+
+  @include vp-767 {
+    margin-top: 7px;
+  }
+}
+
+.footer__social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-width: 160px;
+  margin-top: 11px;
+  margin-left: auto;
+
+  @include vp-1023 {
+    min-width: 115px;
+    margin-top: 0;
+  }
+
+  @include vp-767 {
+    justify-content: flex-start;
+    margin-top: 30px;
+    margin-left: 0;
+  }
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 27px;
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.6;
+  }
+
+  @include vp-1023 {
+    margin-left: 22px;
+  }
+
+  @include vp-767 {
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.footer__social-icon {
+  height: 22px;
+
+  @include vp-1023 {
+    height: 16px;
+
+    &--ok {
+      width: 9.6px;
+    }
+
+    &--zen {
+      width: 16.4px;
+    }
+
+    &--reddit {
+      width: 16.4px;
+    }
+  }
 }
