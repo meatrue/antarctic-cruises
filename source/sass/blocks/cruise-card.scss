@@ -1,32 +1,77 @@
 .cruise-card {
+  overflow: hidden;
+  width: 100%;
+  height: 386px;
+  transition: all $trans-default;
 
+  @include hover-focus {
+    box-shadow: 0 4px 35px 0 rgba(1, 28, 64, 0.15);
+
+    .cruise-card__wrapper {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.cruise-card__wrapper {
+  display: flex;
+  width: 200%;
+  min-height: 100%;
+  transition: all $trans-600;
 }
 
 .cruise-card__cover {
+  position: relative;
+  width: 50%;
+  background-color: $color-base-dark;
+
   h3 {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 2;
     margin-top: 0;
     margin-bottom: 0;
+    color: $color-base-light;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, $color-base-dark 100%);
   }
 }
 
 .cruise-card__image {
-
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .cruise-card__info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
   padding: 35px 25px;
   color: $color-base-light;
   background-color: $color-base-dark;
 
   h3 {
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    line-height: 1;
   }
 
   dl {
     margin-top: 0;
     margin-bottom: 0;
     font-size: $fz-base-small;
+    line-height: 1.4;
   }
 
   dt {
@@ -35,6 +80,24 @@
 
   dd {
     margin-left: 0;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+    color: $color-base-grey;
   }
+
+  @include vp-1023 {
+    padding: 35px;
+  }
+
+  @include vp-767 {
+    padding: 35px 25px;
+  }
+}
+
+.cruise-card__order {
+  display: block;
+  margin-top: auto;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  text-align: center;
+  line-height: 1;
 }

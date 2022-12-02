@@ -632,6 +632,14 @@ button,
   transition: none !important;
 }
 
+.error {
+  outline: 2px solid #ff1553;
+}
+
+.error.focus-visible:focus {
+  outline: 2px solid #ff1553;
+}
+
 .container {
   width: 100%;
   max-width: 1920px;
@@ -1245,12 +1253,82 @@ form button.focus-visible:focus {
   background-image: url("../img/svg/tours.svg");
 }
 
+.cruise-card {
+  overflow: hidden;
+  width: 100%;
+  height: 386px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cruise-card.focus-visible:focus {
+  -webkit-box-shadow: 0 4px 35px 0 rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 35px 0 rgba(1, 28, 64, 0.15);
+}
+
+.cruise-card.focus-visible:focus .cruise-card__wrapper {
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.cruise-card__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200%;
+  min-height: 100%;
+  -webkit-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.cruise-card__cover {
+  position: relative;
+  width: 50%;
+  background-color: #011c40;
+}
+
 .cruise-card__cover h3 {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  z-index: 2;
   margin-top: 0;
   margin-bottom: 0;
+  color: #f9fbfd;
+}
+
+.cruise-card__cover::before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  content: "";
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40));
+  background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+  background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+}
+
+.cruise-card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .cruise-card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 50%;
   padding: 35px 25px;
   color: #f9fbfd;
   background-color: #011c40;
@@ -1258,13 +1336,15 @@ form button.focus-visible:focus {
 
 .cruise-card__info h3 {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  line-height: 1;
 }
 
 .cruise-card__info dl {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 14px;
+  line-height: 1.4;
 }
 
 .cruise-card__info dt {
@@ -1273,7 +1353,42 @@ form button.focus-visible:focus {
 
 .cruise-card__info dd {
   margin-left: 0;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+  color: #d8d8d9;
+}
+
+.cruise-card__order {
+  display: block;
+  margin-top: auto;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  text-align: center;
+  line-height: 1;
+}
+
+.cruises {
+  padding: 95px 40px 120px;
+}
+
+.cruises h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cruises__wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 260px);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  row-gap: 30px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .booking {
@@ -1540,6 +1655,19 @@ form button.focus-visible:focus {
   .advantages__item--tours::before {
     width: 36px;
     height: 26px;
+  }
+
+  .cruise-card__info {
+    padding: 35px;
+  }
+
+  .cruises {
+    padding: 100px 45px;
+  }
+
+  .cruises__wrapper {
+    -ms-grid-columns: (309px)[2];
+    grid-template-columns: repeat(2, 309px);
   }
 
   .booking {
@@ -1893,6 +2021,27 @@ form button.focus-visible:focus {
     top: 25px;
   }
 
+  .cruise-card__info {
+    padding: 35px 25px;
+  }
+
+  .cruises {
+    padding: 65px 15px;
+  }
+
+  .cruises h2 {
+    margin-bottom: 10px;
+  }
+
+  .cruises__wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 309px));
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
   .booking {
     padding: 50px 15px;
     font-size: 16px;
@@ -1900,6 +2049,7 @@ form button.focus-visible:focus {
   }
 
   .booking h2 {
+    padding: 0 20px;
     font-size: 24px;
     line-height: 1.3;
   }
@@ -1919,7 +2069,7 @@ form button.focus-visible:focus {
   }
 
   .booking__description p {
-    padding: 0 10px;
+    padding: 0 20px;
     line-height: 1.37;
   }
 }
@@ -1979,5 +2129,16 @@ form button.focus-visible:focus {
 
   .footer__social-link:hover:not(.focus-visible) {
     opacity: 0.6;
+  }
+
+  .cruise-card:hover:not(.focus-visible) {
+    -webkit-box-shadow: 0 4px 35px 0 rgba(1, 28, 64, 0.15);
+    box-shadow: 0 4px 35px 0 rgba(1, 28, 64, 0.15);
+  }
+
+  .cruise-card:hover:not(.focus-visible) .cruise-card__wrapper {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
