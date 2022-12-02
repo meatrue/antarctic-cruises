@@ -70,33 +70,35 @@
       </section>
 
       <section class="advantages">
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <img class="advantages__icon" src="./img/svg/liner.svg" width="" height="" alt="">
-            <h3>Небольшой круизный лайнер</h3>
-            <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</p>
-          </li>
+        <div class="page__wrapper">
+          <h2>Преимущества</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item advantages__item--liner">
+              <h3>Небольшой круизный лайнер</h3>
+              <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</p>
+            </li>
 
-          <li class="advantages__item">
-            <img class="advantages__icon" src="./img/svg/all-inclusive.svg" width="" height="" alt="">
-            <h3>Система все включено</h3>
-            <p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
-          </li>
+            <li class="advantages__item advantages__item--inclusive">
+              <h3>Система все включено</h3>
+              <p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
+            </li>
 
-          <li class="advantages__item">
-            <img class="advantages__icon" src="./img/svg/tours.svg" width="" height="" alt="">
-            <h3>Экскурсионные туры на Zodiac</h3>
-            <p>Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiack c опытными экскурсоводами. </p>
-          </li>
-        </ul>
+            <li class="advantages__item advantages__item--tours">
+              <h3>Экскурсионные туры на Zodiac</h3>
+              <p>Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiack c опытными экскурсоводами. </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="cruises">
         <article class="cruises__item cruise-card">
           <div class="cruise-card__cover">
             <h3>Круиз "Астория"</h3>
+            <img class="cruise-card__image" src="./img/cruises/cruise1-desktop.jpg" width="260" height="386" alt="Круиз 'Астория'">
           </div>
           <div class="cruise-card__info">
+            <h3>Круиз "Астория"</h3>
             <dl>
               <dt>Маршрут</dt>
               <dd>Аргентина - Фолклендские острова - Антарктида</dd>
@@ -246,37 +248,39 @@
       </section>
 
       <section class="booking">
-        <div class="booking__description">
-          <h2>Раннее бронирование</h2>
-          <p>Забронируйте тур за 3-6 месяцев
-            до даты выезда и сэкономьте до 50%</p>
-        </div>
+        <div class="page__wrapper booking__wrapper">
+          <div class="booking__description">
+            <h2>Раннее бронирование</h2>
+            <p>Забронируйте тур за&nbsp;3-6&nbsp;месяцев
+              до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+          </div>
 
-        <form method="post" action="https://echo.htmlacademy.ru">
-          <h3>Оставьте заявку и мы свяжемся с вами в ближайшее время</h3>
-          <p>
-            <label class="visually-hidden" for="call-name">Имя.</label>
-            <input id="call-name" name="name" type="text" placeholder="Имя" required>
-          </p>
-          <p>
-            <label class="visually-hidden" for="call-phone">Телефон.</label>
-            <input id="call-phone" name="phone" type="tel" placeholder="Телефон" required>
-          </p>
-          <p>
-            <label class="visually-hidden" for="call-email">Email.</label>
-            <input id="call-email" name="email" type="email" placeholder="Email" required>
-          </p>
-          <p>
-            <label>
-              <input id="call-agreement" name="agreement" type="checkbox" checked required>
-              <span></span>
-              <span>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
-            </label>
-          </p>
-          <p>
-            <button type="submit">Оставить заявку</button>
-          </p>
-        </form>
+          <form method="post" action="https://echo.htmlacademy.ru">
+            <h3>Оставьте заявку и мы свяжемся с вами в ближайшее время</h3>
+            <p>
+              <label class="visually-hidden" for="call-name">Имя.</label>
+              <input id="call-name" name="name" type="text" placeholder="Имя" required>
+            </p>
+            <p>
+              <label class="visually-hidden" for="call-phone">Телефон.</label>
+              <input id="call-phone" name="phone" type="tel" placeholder="Телефон" required>
+            </p>
+            <p>
+              <label class="visually-hidden" for="call-email">Email.</label>
+              <input id="call-email" name="email" type="email" placeholder="Email" required>
+            </p>
+            <p>
+              <label class="checkbox-label">
+                <input id="call-agreement" name="agreement" type="checkbox" checked required>
+                <span></span>
+                <span>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
+              </label>
+            </p>
+            <p>
+              <button type="submit">Оставить заявку</button>
+            </p>
+          </form>
+        </div>
       </section>
 
       <section class="contacts">

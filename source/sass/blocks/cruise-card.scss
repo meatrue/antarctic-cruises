@@ -1,0 +1,40 @@
+.cruise-card {
+
+}
+
+.cruise-card__cover {
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.cruise-card__image {
+
+}
+
+.cruise-card__info {
+  padding: 35px 25px;
+  color: $color-base-light;
+  background-color: $color-base-dark;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  dl {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: $fz-base-small;
+  }
+
+  dt {
+    font-weight: 500;
+  }
+
+  dd {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}

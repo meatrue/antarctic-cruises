@@ -686,7 +686,14 @@ button,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 14px 20px 15px;
+  text-align: center;
   font-size: 14px;
   line-height: 1.5;
   font-weight: 600;
@@ -863,7 +870,140 @@ button,
 }
 
 form {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 20px;
+  padding: 50px;
+  font-size: 10px;
+  line-height: 1.3;
+  color: #f9fbfd;
   background-color: #011c40;
+}
+
+form h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+form input {
+  width: 100%;
+  padding: 11px 16px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  border: none;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+form input::-webkit-input-placeholder {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+form input::-moz-placeholder {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+form input:-ms-input-placeholder {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+form input::-ms-input-placeholder {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+form input::placeholder {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+form input[type=checkbox] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+form input[type=checkbox] + span,
+form input[type=checkbox] + span + span {
+  cursor: pointer;
+}
+
+form input[type=checkbox] + span {
+  min-width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  background-color: #f9fbfd;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+form input[type=checkbox]:checked + span {
+  background-image: url("../img/svg/checkbox.svg");
+  background-size: 12px 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+form .checkbox-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px 20px 15px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #011c40;
+  background-color: #f9fbfd;
+  border: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+form button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+form button.focus-visible:focus {
+  opacity: 0.8;
 }
 
 .header {
@@ -1032,6 +1172,155 @@ form {
   object-fit: contain;
 }
 
+.advantages {
+  min-height: 562px;
+  padding: 120px 40px;
+  background-image: url("../img/advantages-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 14px;
+}
+
+.advantages h2 {
+  margin-top: 0;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.advantages__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.advantages__item {
+  position: relative;
+  padding: 87px 42px 50px 30px;
+  background-color: #f9fbfd;
+}
+
+.advantages__item h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.advantages__item p {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.advantages__item::before {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  content: "";
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.advantages__item--liner::before {
+  width: 27px;
+  height: 32px;
+  background-image: url("../img/svg/liner.svg");
+}
+
+.advantages__item--inclusive::before {
+  width: 38px;
+  height: 32px;
+  background-image: url("../img/svg/all-inclusive.svg");
+}
+
+.advantages__item--tours::before {
+  width: 44px;
+  height: 32px;
+  background-image: url("../img/svg/tours.svg");
+}
+
+.cruise-card__cover h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.cruise-card__info {
+  padding: 35px 25px;
+  color: #f9fbfd;
+  background-color: #011c40;
+}
+
+.cruise-card__info h3 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.cruise-card__info dl {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.cruise-card__info dt {
+  font-weight: 500;
+}
+
+.cruise-card__info dd {
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+
+.booking {
+  min-height: 555px;
+  padding: 50px 40px;
+  background-image: url("../img/booking-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 18px;
+}
+
+.booking h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.booking p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.booking__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.booking__wrapper form {
+  -ms-grid-column-align: end;
+  justify-self: end;
+  width: 403px;
+  margin-right: 60px;
+}
+
+.booking__description {
+  -ms-grid-column-align: start;
+  justify-self: start;
+  margin-left: 60px;
+  padding-right: 20px;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1076,6 +1365,14 @@ form {
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
   .promo {
     background-image: url("../img/promo-desktop@2x.jpg");
+  }
+
+  .advantages {
+    background-image: url("../img/advantages-desktop@2x.jpg");
+  }
+
+  .booking {
+    background-image: url("../img/booking-desktop@2x.jpg");
   }
 }
 
@@ -1208,6 +1505,89 @@ form {
     min-width: 324px;
     min-height: 174px;
   }
+
+  .advantages {
+    min-height: 588px;
+    padding: 100px 45px;
+    background-image: url("../img/advantages-tablet.jpg");
+  }
+
+  .advantages__list {
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+
+  .advantages__item {
+    padding: 76px 16px 25px 20px;
+  }
+
+  .advantages__item::before {
+    top: 26px;
+    left: 20px;
+  }
+
+  .advantages__item--liner::before {
+    width: 21px;
+    height: 26px;
+  }
+
+  .advantages__item--inclusive::before {
+    width: 27px;
+    height: 26px;
+  }
+
+  .advantages__item--tours::before {
+    width: 36px;
+    height: 26px;
+  }
+
+  .booking {
+    min-height: 455px;
+    padding: 100px 45px;
+    background-image: url("../img/booking-tablet.jpg");
+  }
+
+  .booking h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 34px;
+  }
+
+  .booking__wrapper {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .booking__wrapper form {
+    -ms-grid-column-align: center;
+    justify-self: center;
+    margin-right: 0;
+  }
+
+  .booking__description {
+    -ms-grid-column-align: center;
+    justify-self: center;
+    margin-bottom: 60px;
+    margin-left: 0;
+    padding-right: 0;
+  }
+
+  .booking__description p {
+    padding: 0 160px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .advantages {
+    background-image: url("../img/advantages-tablet@2x.jpg");
+  }
+
+  .booking {
+    background-image: url("../img/booking-tablet@2x.jpg");
+  }
 }
 
 @media (max-width: 768px) {
@@ -1274,6 +1654,14 @@ form {
 
   .navigation--header .navigation__link {
     font-size: 18px;
+  }
+
+  form {
+    padding: 40px 30px;
+  }
+
+  form input[type=checkbox] + span {
+    margin-right: 8px;
   }
 
   .header {
@@ -1478,11 +1866,77 @@ form {
     min-width: 290px;
     min-height: 156px;
   }
+
+  .advantages {
+    padding: 65px 15px;
+    background-image: url("../img/advantages-mobile.jpg");
+  }
+
+  .advantages h2 {
+    margin-bottom: 40px;
+  }
+
+  .advantages__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+    row-gap: 30px;
+  }
+
+  .advantages__item {
+    padding: 76px 15px 25px 20px;
+  }
+
+  .advantages__item::before {
+    top: 25px;
+  }
+
+  .booking {
+    padding: 50px 15px;
+    font-size: 16px;
+    background-image: url("../img/booking-mobile.jpg");
+  }
+
+  .booking h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .booking__wrapper form {
+    width: 100%;
+    min-width: 290px;
+    max-width: 403px;
+  }
+
+  .booking__wrapper form h3 {
+    line-height: 1.38;
+  }
+
+  .booking__description {
+    margin-bottom: 40px;
+  }
+
+  .booking__description p {
+    padding: 0 10px;
+    line-height: 1.37;
+  }
 }
 
 @media (max-width: 767px) and (hover: hover) {
   .header__navigation-toggle:hover:not(.focus-visible) {
     opacity: 0.6;
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .advantages {
+    background-image: url("../img/advantages-mobile@2x.jpg");
+  }
+
+  .booking {
+    background-image: url("../img/booking-mobile@2x.jpg");
   }
 }
 
@@ -1509,6 +1963,18 @@ form {
 
   .navigation__link:hover:not(.focus-visible) {
     opacity: 0.6;
+  }
+
+  form input:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
+  form input[type=checkbox]:hover:not(.focus-visible) + span {
+    opacity: 0.6;
+  }
+
+  form button:hover:not(.focus-visible) {
+    opacity: 0.8;
   }
 
   .footer__social-link:hover:not(.focus-visible) {
