@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initNavigation} from './modules/navigation';
 import {initForms} from './modules/form';
+import {initMap} from './modules/map';
 
 // ---------------------------------
 
@@ -21,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
     initForms();
+    initMap();
   });
 });
 

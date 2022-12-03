@@ -16,6 +16,13 @@
     <meta name="description" content="Круизы в Антарктику">
     <title>Круизы в Антарктику</title>
 
+    <link rel="icon" href="./img/favicons/favicon.ico">
+    <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.webmanifest">
+
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
@@ -28,10 +35,10 @@
         </a>
 
         <nav class="header__navigation navigation navigation--header">
-          <a class="navigation__link" href="#">Преимущества</a>
+          <a class="navigation__link" href="#advantages">Преимущества</a>
           <a class="navigation__link" href="#">Направления</a>
-          <a class="navigation__link" href="#">Ближайшие круизы</a>
-          <a class="navigation__link" href="#">Контакты</a>
+          <a class="navigation__link" href="#cruises">Ближайшие круизы</a>
+          <a class="navigation__link" href="#contacts">Контакты</a>
         </nav>
 
         <button class="header__navigation-toggle" type="button">
@@ -69,7 +76,7 @@
         </div>
       </section>
 
-      <section class="advantages">
+      <section class="advantages" id="advantages">
         <div class="page__wrapper">
           <h2>Преимущества</h2>
           <ul class="advantages__list">
@@ -91,7 +98,7 @@
         </div>
       </section>
 
-      <section class="cruises">
+      <section class="cruises" id="cruises">
         <h2>Ближайшие круизы</h2>
         <div class="page__wrapper cruises__wrapper">
           <article class="cruises__item cruise-card">
@@ -340,13 +347,18 @@
         </div>
       </section>
 
-      <section class="contacts">
-        <div class="contacts__map"></div>
-        <div class="contacts__info">
-          <p>У вас ещё остались вопросы или сомнения?
-            Приезжайте к нам в офис и мы вам все расскажем.</p>
-          <address>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</address>
-          <a href="tel:+78002000000">8-800-200-00-00</a>
+      <section class="contacts" id="contacts">
+        <h2 class="visually-hidden">Мы на карте.</h2>
+        <div class="page__wrapper contacts__wrapper">
+          <div class="contacts__map" id="map">
+            <img class="contacts__map-image" src="./img/map.png" width="560" height="306" loading="lazy" alt="Наш адрес: Санкт-Петербург, ул. Большая Конюшенная, 19/8">
+          </div>
+          <div class="contacts__info">
+            <p>У вас ещё остались вопросы или сомнения?
+              Приезжайте к нам в офис и мы вам все расскажем.</p>
+            <address>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</address>
+            <a href="tel:+78002000000">8-800-200-00-00</a>
+          </div>
         </div>
       </section>
     </main>
@@ -389,35 +401,7 @@
       </div>
     </footer>
 
-    <!-- Модалки -->
-    <!--<div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>-->
-
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=9e975622-bb8b-471a-b0bf-69f718d3034d&lang=ru_RU"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
