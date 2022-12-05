@@ -1,14 +1,14 @@
 .footer {
-  padding: 50px $page-padding-desktop;
+  padding: 48px $page-padding-desktop 45px;
   background-color: $color-base-dark;
 
   @include vp-1023 {
-    padding: 50px $page-padding-tablet;
+    padding: 50px $page-padding-tablet 41px;
   }
 
 
   @include vp-767 {
-    padding: 40px $page-padding-mobile;
+    padding: 40px $page-padding-mobile 29px;
   }
 }
 
@@ -34,11 +34,11 @@
   margin-top: 13px;
 
   @include vp-1023 {
-    margin-top: 0;
+    margin-top: 4px;
   }
 
   @include vp-767 {
-    margin-top: 7px;
+    margin-top: 4px;
   }
 }
 
@@ -53,7 +53,7 @@
 
   @include vp-1023 {
     min-width: 115px;
-    margin-top: 0;
+    margin-top: 4px;
   }
 
   @include vp-767 {
@@ -67,6 +67,7 @@
   display: flex;
   align-items: flex-start;
   margin-left: 27px;
+  margin-bottom: 10px;
   transition: opacity $trans-default;
 
   @include hover-focus {

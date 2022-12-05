@@ -6,7 +6,7 @@
   }
 
   @include vp-767 {
-    padding: 65px $page-padding-mobile;
+    padding: 57px $page-padding-mobile 40px;
   }
 }
 
@@ -58,14 +58,14 @@
 .contacts__info {
   p {
     margin-top: 0;
-    margin-bottom: 45px;
+    margin-bottom: 34px;
     font-size: $fz-base-large;
     font-weight: 500;
   }
 
   address {
     position: relative;
-    margin-bottom: 33px;
+    margin-bottom: 20px;
     padding-left: 25px;
     font-style: normal;
   }
@@ -99,11 +99,34 @@
 
   @include vp-1023 {
     p {
-      margin-bottom: 40px;
+      margin-bottom: 25px;
+    }
+
+    address {
+      margin-bottom: 21px;
+      padding-right: 36px;
+    }
+
+    address::before {
+      top: 5px;
+      margin-top: 0;
     }
   }
 
   @include vp-767 {
     margin-bottom: 43px;
+
+    p {
+      margin-bottom: 27px;
+    }
+
+    address {
+      padding-right: 6px;
+      padding-left: 28px;
+    }
+
+    a[href^="tel"] {
+      padding-left: 28px;
+    }
   }
 }

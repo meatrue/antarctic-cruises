@@ -1,6 +1,7 @@
 .advantages {
   min-height: 562px;
-  padding: 120px $page-padding-desktop;
+  padding: 110px $page-padding-desktop;
+  background-color: $color-bg-additional-light;
   background-image: url("../img/advantages-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,13 +15,13 @@
 
   h2 {
     margin-top: 0;
-    margin-bottom: 60px;
+    margin-bottom: 49px;
     text-align: center;
   }
 
   @include vp-1023 {
     min-height: 588px;
-    padding: 100px $page-padding-tablet;
+    padding: 90px $page-padding-tablet 100px;
     background-image: url("../img/advantages-tablet.jpg");
 
     @include retina {
@@ -29,7 +30,7 @@
   }
 
   @include vp-767 {
-    padding: 65px $page-padding-mobile;
+    padding: 56px $page-padding-mobile 66px;
     background-image: url("../img/advantages-mobile.jpg");
 
     @include retina {
@@ -37,7 +38,7 @@
     }
 
     h2 {
-      margin-bottom: 40px;
+      margin-bottom: 31px;
     }
   }
 }
@@ -46,6 +47,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
+  row-gap: 40px;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -64,18 +66,23 @@
 
 .advantages__item {
   position: relative;
-  padding: 87px 42px 50px 30px;
+  padding: 81px 30px 36px;
   background-color: $color-base-light;
 
   h3 {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
   }
 
   p {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 10px;
+    padding-right: 12px;
     line-height: 1.4;
+  }
+
+  &--inclusive p {
+    padding-right: 16px;
   }
 
   &::before {
@@ -106,7 +113,16 @@
   }
 
   @include vp-1023 {
-    padding: 76px 16px 25px 20px;
+    padding: 68px 16px 13px 20px;
+
+    &--inclusive p,
+    &--tours p {
+      padding-right: 0;
+    }
+
+    &--tours h3 {
+      margin-bottom: 18px;
+    }
 
     &::before {
       top: 26px;
@@ -130,7 +146,19 @@
   }
 
   @include vp-767 {
-    padding: 76px 15px 25px 20px;
+    padding: 68px 15px 11px 20px;
+
+    h3 {
+      padding-right: 54px;
+    }
+
+    &--tours h3 {
+      margin-bottom: 8px;
+    }
+
+    p {
+      padding-right: 0;
+    }
 
     &::before {
       top: 25px;

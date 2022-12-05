@@ -52,17 +52,17 @@
   justify-content: flex-end;
   align-items: flex-start;
   min-height: 650px;
-  padding-bottom: 283px;
+  padding-bottom: 268px;
 
   p {
-    margin: 0 0 0 95px;
+    margin: 0 0 10px 95px;
     line-height: 1.2;
     text-shadow: 0 4px 4px $color-shadow;
   }
 
   @include vp-1023 {
     min-height: 638px;
-    padding-bottom: 280px;
+    padding-bottom: 266px;
 
     p {
       margin-left: 0;
@@ -72,7 +72,7 @@
 
   @include vp-767 {
     min-height: 500px;
-    padding-bottom: 185px;
+    padding-bottom: 172px;
 
     p {
       padding-right: 60px;
@@ -82,16 +82,16 @@
 }
 
 .promo__title {
-  margin: 0 0 30px 95px;
+  margin: 0 0 12px 95px;
   text-shadow: 0 4px 4px $color-shadow;
 
 
   @include vp-1023 {
-    margin: 0 0 29px;
+    margin: 0 0 12px;
     text-shadow: none;
   }
 
   @include vp-767 {
-    margin-bottom: 25px;
+    margin-bottom: 11px;
   }
 }

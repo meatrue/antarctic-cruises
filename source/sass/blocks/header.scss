@@ -28,6 +28,14 @@
   align-items: flex-start;
 }
 
+.header__navigation {
+  margin-top: 10px;
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
+}
+
 .header__navigation-toggle {
   display: none;
 }
