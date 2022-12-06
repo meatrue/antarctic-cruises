@@ -12,12 +12,13 @@ body {
 }
 
 html {
-  font-style: normal;
+  font-family: $ff-base;
+  font-size: $fz-base;
+  line-height: 1.5;
+  color: $color-base-dark;
   font-weight: 400;
-  font-size: $fz-default;
-  line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
+  font-style: normal;
+  scroll-behavior: smooth;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -31,7 +32,50 @@ body {
   width: 100%;
   height: 100%;
 
-  background-color: $color-default-white;
+  background-color: $color-base-light;
+}
+
+h1 {
+  font-size: $fz-title-large-desktop;
+  line-height: 1.2;
+  font-weight: 700;
+
+  @include vp-1023 {
+    font-size: $fz-title-large-tablet;
+  }
+
+  @include vp-767 {
+    font-size: $fz-title-large-mobile;
+    line-height: 1.25;
+  }
+}
+
+h2 {
+  font-size: $fz-title-medium-desktop;
+  line-height: 1.5;
+  font-weight: 600;
+
+  @include vp-1023 {
+    font-size: $fz-title-medium-tablet;
+  }
+
+  @include vp-767 {
+    font-size: $fz-title-medium-mobile;
+  }
+}
+
+h3 {
+  font-size: $fz-title-small-desktop;
+  line-height: 1.5;
+  font-weight: 500;
+
+  @include vp-1023 {
+    font-size: $fz-title-small-tablet;
+  }
+
+  @include vp-767 {
+    font-size: $fz-title-small-mobile;
+  }
 }
 
 a {

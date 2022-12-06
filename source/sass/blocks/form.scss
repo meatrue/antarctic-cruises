@@ -68,6 +68,12 @@ form {
       }
     }
 
+    @include focus {
+      & + span {
+        opacity: 0.6;
+      }
+    }
+
     &:checked + span {
       background-image: url("../img/svg/checkbox.svg");
       background-size: 12px 8px;

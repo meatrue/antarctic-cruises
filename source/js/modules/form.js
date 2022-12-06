@@ -1,5 +1,3 @@
-const PHONE_LENGTH = 11;
-
 const formElements = document.querySelectorAll('form');
 
 
@@ -77,4 +75,3 @@ const initForms = () => {
 };
 
 export {initForms};
-

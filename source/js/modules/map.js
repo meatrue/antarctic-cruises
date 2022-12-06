@@ -1,11 +1,14 @@
 const PIN_ICON_PATH = './img/svg/address-marker.svg';
 
 const mapContainerElement = document.querySelector('#map');
-const mapImageElement = mapContainerElement.querySelector('img');
+const mapImageElement = document.querySelector('#map img');
 
 
 const setMap = () => {
-  mapImageElement.remove();
+  if (mapImageElement) {
+    mapImageElement.remove();
+  }
+
   const center = [59.938430492248656, 30.32316041534418];
 
   const myMap = new ymaps.Map(mapContainerElement, { // eslint-disable-line
@@ -36,7 +39,9 @@ const setMap = () => {
 
 
 const initMap = () => {
-  ymaps.ready(setMap); // eslint-disable-line
+  if (mapContainerElement) {
+    ymaps.ready(setMap); // eslint-disable-line
+  }
 };
 
 

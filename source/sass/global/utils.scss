@@ -17,6 +17,12 @@
   }
 }
 
+.section-wrapper {
+  min-width: $min-content-width;
+  max-width: $max-content-width;
+  margin: 0 auto;
+}
+
 .rouble {
   font-family: $ff-rouble;
   /* stylelint-disable */
@@ -64,6 +70,10 @@
 .no-transition {
   /* stylelint-disable-next-line */
   transition: none !important;
+}
+
+.navigation-opened {
+  overflow: hidden;
 }
 
 .error {

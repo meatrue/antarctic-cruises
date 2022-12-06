@@ -71,10 +71,24 @@
 .cruise-card__info {
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
   width: 50%;
   padding: 30px 25px 35px;
   color: $color-base-light;
   background-color: $color-base-dark;
+  scrollbar-color: #093d82 $color-base-dark;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: $color-base-dark;
+  }
+
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #093d82;
+    border-radius: 9em;
+  }
 
   h3 {
     margin-top: 0;
