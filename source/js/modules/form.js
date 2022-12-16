@@ -21,7 +21,7 @@ const validateEmailField = (fieldElement) => {
 
 const validateNameField = (fieldElement) => {
   const fieldValue = fieldElement.value.trim();
-  const letters = /^[А-Яа-я\s\-]+$/;
+  const letters = /^[А-Яа-яA-Za-z\s\-]+$/;
   const condition = (fieldValue.match(letters) && fieldValue.length >= 0);
 
   return toggleError(fieldElement, condition);
@@ -29,8 +29,9 @@ const validateNameField = (fieldElement) => {
 
 
 const validatePhoneField = (fieldElement) => {
-  const phoneMask = /^(8|\+7)(\(?[0-9]{3}\)?)([0-9]{7})$/;
-  const condition = fieldElement.value.match(phoneMask);
+  const letters = /[А-Яа-яA-Za-z]/;
+  const fieldValue = fieldElement.value.trim();
+  const condition = !fieldValue.match(letters) && (fieldValue.length > 0);
 
   return toggleError(fieldElement, condition);
 };

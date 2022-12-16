@@ -12,7 +12,6 @@ const setMap = () => {
   const center = [59.938430492248656, 30.32316041534418];
 
   const myMap = new ymaps.Map(mapContainerElement, { // eslint-disable-line
-
     center,
     zoom: 15,
   });

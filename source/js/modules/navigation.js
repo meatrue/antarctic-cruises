@@ -11,7 +11,6 @@ const MOBILE_NAV_BREAKPOINT = '767px';
 
 const bodyElement = document.body;
 const navigationContainerElement = document.querySelector(`.${NAV_CONTAINER_ELEMENT_CLASS}`);
-const navigationToggleElement = document.querySelector(`.${NAV_TOGGLE_ELEMENT_CLASS}`);
 const navigationElement = document.querySelector(`.${NAV_CLASS}`);
 
 
@@ -28,27 +27,26 @@ const toggleMenu = () => {
 };
 
 
-const onNavigationClick = (e) => {
+const onNavContainerClick = (e) => {
   const target = e.target;
 
-  if (!target.classList.contains(NAV_LINK_CLASS)) {
-    return;
+  if (target.classList.contains(NAV_LINK_CLASS)
+    || target.classList.contains(NAV_TOGGLE_ELEMENT_CLASS)
+    || target.classList.contains(NAV_CONTAINER_ELEMENT_CLASS)) {
+    toggleMenu();
   }
-
-  toggleMenu();
 };
 
 
 const setNavigation = () => {
-  if (!navigationContainerElement || !navigationToggleElement || !navigationElement) {
+  if (!navigationContainerElement || !navigationElement) {
     return;
   }
 
   navigationContainerElement.classList.remove(NAV_ELEMENT_NOJS_CLASS);
   navigationContainerElement.classList.add(NAV_CLOSED_CLASS);
 
-  navigationToggleElement.addEventListener('click', toggleMenu);
-  navigationElement.addEventListener('click', onNavigationClick);
+  navigationContainerElement.addEventListener('click', onNavContainerClick);
 };
 
 

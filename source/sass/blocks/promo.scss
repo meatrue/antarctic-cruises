@@ -1,12 +1,14 @@
 .promo {
   position: relative;
   z-index: 1;
-  padding: 0 $page-padding-desktop;
+  min-height: 650px;
+  padding: 73px $page-padding-desktop;
   font-size: 20px;
   color: $color-base-light;
   background-color: $color-base-dark;
   background-image: url("../img/promo-desktop.jpg");
   background-repeat: no-repeat;
+  background-position: bottom center;
   background-size: cover;
   box-shadow: 0 4px 4px 0 $color-shadow;
 
@@ -18,7 +20,7 @@
 
   @include vp-1023 {
     min-height: 638px;
-    padding: 0 $page-padding-tablet;
+    padding: 68px $page-padding-tablet;
     font-size: $fz-base-large;
     box-shadow: none;
   }
@@ -33,7 +35,7 @@
 
   @include vp-767 {
     min-height: 500px;
-    padding: 0 $page-padding-mobile;
+    padding: 62px $page-padding-mobile;
     font-size: $fz-base;
   }
 
@@ -49,10 +51,9 @@
 .promo__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-start;
-  min-height: 650px;
-  padding-bottom: 268px;
+  min-height: 504px;
 
   p {
     margin: 0 0 10px 95px;
@@ -61,8 +62,7 @@
   }
 
   @include vp-1023 {
-    min-height: 638px;
-    padding-bottom: 266px;
+    min-height: 502px;
 
     p {
       margin-left: 0;
@@ -71,8 +71,7 @@
   }
 
   @include vp-767 {
-    min-height: 500px;
-    padding-bottom: 172px;
+    min-height: 376px;
 
     p {
       padding-right: 60px;
@@ -92,6 +91,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 11px;
+    margin-top: 5px;
+    margin-bottom: 12px;
   }
 }

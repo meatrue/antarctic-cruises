@@ -59,7 +59,7 @@ form {
       height: 18px;
       margin-right: 5px;
       background-color: $color-base-light;
-      transition: all $trans-default;
+      transition: opacity $trans-default;
     }
 
     @include hover {
@@ -70,7 +70,8 @@ form {
 
     @include focus {
       & + span {
-        opacity: 0.6;
+        border: 2px solid #368bbe;
+        outline: 1px solid #ffffff;
       }
     }
 

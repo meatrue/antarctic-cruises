@@ -23,7 +23,7 @@
 
 .cruises__wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 260px);
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   column-gap: 30px;
   row-gap: 30px;
@@ -31,11 +31,11 @@
   padding-left: 15px;
 
   @include vp-1023 {
-    grid-template-columns: repeat(2, 309px);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @include vp-767 {
-    grid-template-columns: repeat(auto-fit, minmax(270px, 309px));
+    grid-template-columns: 1fr;
     column-gap: 30px;
     padding-right: 10px;
     padding-left: 10px;

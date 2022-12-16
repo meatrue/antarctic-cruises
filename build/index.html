@@ -20,6 +20,9 @@
     <link rel="manifest" href="./manifest.webmanifest">
 
     <link rel="stylesheet" href="css/style.min.css">
+
+    <link rel="preconnect" href="//api-maps.yandex.ru">
+	  <link rel="dns-prefetch" href="//api-maps.yandex.ru">
   </head>
   <body>
     <header class="header header--navigation-nojs">
@@ -61,13 +64,8 @@
 
           <div class="journey__image">
             <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="./img/pinguins-desktop.webp 1x, ./img/pinguins-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="./img/pinguins-tablet.webp 1x, ./img/pinguins-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="./img/pinguins-mobile.webp 1x, ./img/pinguins-mobile@2x.webp 2x">
-
-              <source media="(min-width: 1024px)" srcset="./img/pinguins-desktop.jpg 1x, ./img/pinguins-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="./img/pinguins-tablet.jpg 1x, ./img/pinguins-tablet@2x.jpg 2x">
-              <img src="./img/pinguins-mobile.jpg" srcset="./img/pinguins-mobile@2x.jpg 2x" width="290" height="156" alt="Пингвины идут по снежному склону.">
+              <source type="image/webp" srcset="./img/pinguins.webp 1x, ./img/pinguins@2x.webp 2x">
+              <img src="./img/pinguins.jpg" srcset="./img/pinguins@2x.jpg 2x" width="560" height="301" alt="Пингвины идут по снежному склону.">
             </picture>
           </div>
         </div>
@@ -98,7 +96,7 @@
       <section class="cruises" id="cruises">
         <h2>Ближайшие круизы</h2>
         <div class="cruises__wrapper section-wrapper">
-          <article class="cruises__item cruise-card">
+          <article class="cruises__item cruise-card" tabindex="0">
             <div class="cruise-card__wrapper">
               <div class="cruise-card__cover">
                 <h3>Круиз “Астория”</h3>
@@ -124,7 +122,7 @@
             </div>
           </article>
 
-          <article class="cruises__item cruise-card">
+          <article class="cruises__item cruise-card" tabindex="0">
             <div class="cruise-card__wrapper">
               <div class="cruise-card__cover">
                 <h3>Круиз “Элайн”</h3>
@@ -150,7 +148,7 @@
             </div>
           </article>
 
-          <article class="cruises__item cruise-card">
+          <article class="cruises__item cruise-card" tabindex="0">
             <div class="cruise-card__wrapper">
               <div class="cruise-card__cover">
                 <h3>Круиз “Атлантис”</h3>
@@ -176,7 +174,7 @@
             </div>
           </article>
 
-          <article class="cruises__item cruise-card">
+          <article class="cruises__item cruise-card" tabindex="0">
             <div class="cruise-card__wrapper">
               <div class="cruise-card__cover">
                 <h3>Круиз “Одиссей”</h3>
@@ -202,7 +200,7 @@
             </div>
           </article>
 
-          <article class="cruises__item cruise-card">
+          <article class="cruises__item cruise-card" tabindex="0">
             <div class="cruise-card__wrapper">
               <div class="cruise-card__cover">
                 <h3>Круиз “Олимпия”</h3>
@@ -228,7 +226,7 @@
             </div>
           </article>
 
-          <article class="cruises__item cruise-card">
+          <article class="cruises__item cruise-card" tabindex="0">
             <div class="cruise-card__wrapper">
               <div class="cruise-card__cover">
                 <h3>Круиз “Аврора”</h3>
@@ -254,7 +252,7 @@
             </div>
           </article>
 
-          <article class="cruises__item cruise-card">
+          <article class="cruises__item cruise-card" tabindex="0">
             <div class="cruise-card__wrapper">
               <div class="cruise-card__cover">
                 <h3>Круиз “Леонор”</h3>
@@ -280,7 +278,7 @@
             </div>
           </article>
 
-          <article class="cruises__item cruise-card">
+          <article class="cruises__item cruise-card" tabindex="0">
             <div class="cruise-card__wrapper">
               <div class="cruise-card__cover">
                 <h3>Круиз “Минион - 1”</h3>
@@ -399,7 +397,7 @@
       </div>
     </footer>
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=9e975622-bb8b-471a-b0bf-69f718d3034d&lang=ru_RU"></script>
+    <script async src="https://api-maps.yandex.ru/2.1/?load=package.standard&apikey=9e975622-bb8b-471a-b0bf-69f718d3034d&lang=ru_RU"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

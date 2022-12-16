@@ -1,29 +1,49 @@
 .cruise-card {
-  overflow: hidden;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
   width: 100%;
-  height: 386px;
-  transition: all $trans-default;
+  height: 28.26vw;
+  max-height: 386px;
+  transition: box-shadow $trans-default;
+
+  @include vp-1023 {
+    height: 50.26vw;
+    max-height: 50.26vw;
+  }
+
+  @include vp-767 {
+    height: 120.62vw;
+    max-height: 120.62vw;
+  }
 
   @include hover-focus {
     box-shadow: 0 4px 35px 0 rgba(1, 28, 64, 0.15);
 
     .cruise-card__wrapper {
-      transform: translateX(-50%);
+      left: -100%;
     }
   }
 }
 
 .cruise-card__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   width: 200%;
   height: 100%;
-  transition: all $trans-600;
+  transition: left 1s ease;
+
+  &:focus-within {
+    left: -100%;
+  }
 }
 
 .cruise-card__cover {
   position: relative;
   width: 50%;
-  max-height: 386px;
+  max-height: 100%;
   background-color: $color-base-dark;
 
   h3 {

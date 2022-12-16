@@ -11,20 +11,24 @@
 }
 
 .journey__wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
   align-items: center;
 
   @include vp-1023 {
-    align-items: flex-start;
+    column-gap: 25px;
+    align-items: start;
   }
 
   @include vp-767 {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    row-gap: 33px;
   }
 }
 
 .journey__description {
-  margin-right: 88px;
+  padding-right: 40px;
 
   h2 {
     margin-top: 8px;
@@ -37,8 +41,9 @@
   }
 
   @include vp-1023 {
+    flex-grow: 1;
     margin-top: -18px;
-    margin-right: 25px;
+    padding-right: 0;
 
     h2 {
       margin-bottom: 17px;
@@ -52,7 +57,7 @@
   }
 
   @include vp-767 {
-    margin: 0 0 33px;
+    margin: 0;
 
     p {
       padding-right: 0;
@@ -61,16 +66,18 @@
 }
 
 .journey__image {
-  min-width: 560px;
-  min-height: 301px;
+  max-width: 560px;
+  max-height: 301px;
 
   img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
 
   @include vp-1023 {
+    flex-grow: 1;
     min-width: 324px;
     min-height: 174px;
     margin-right: 5px;
