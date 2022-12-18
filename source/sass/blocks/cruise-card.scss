@@ -17,13 +17,28 @@
     max-height: 120.62vw;
   }
 
-  @include hover-focus {
+  &:hover,
+  &:active  {
     box-shadow: 0 4px 35px 0 rgba(1, 28, 64, 0.15);
 
     .cruise-card__wrapper {
       left: -100%;
     }
   }
+
+  &:focus-within {
+    .cruise-card__wrapper {
+      left: -100%;
+    }
+  }
+
+  /*@include hover-focus {
+    box-shadow: 0 4px 35px 0 rgba(1, 28, 64, 0.15);
+
+    .cruise-card__wrapper {
+      left: -100%;
+    }
+  }*/
 }
 
 .cruise-card__wrapper {
@@ -34,10 +49,6 @@
   width: 200%;
   height: 100%;
   transition: left 1s ease;
-
-  &:focus-within {
-    left: -100%;
-  }
 }
 
 .cruise-card__cover {
