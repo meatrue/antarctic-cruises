@@ -1111,13 +1111,23 @@ form button.focus-visible:focus {
   font-size: 20px;
   color: #f9fbfd;
   background-color: #011c40;
-  background-image: -webkit-image-set(url("../img/background/promo@2x.webp") type("image/webp") 2x, url("../img/background/promo.webp") type("image/webp") 1x, url("../img/background/promo@2x.jpg") 2x, url("../img/background/promo.jpg") 1x);
-  background-image: image-set(url("../img/background/promo@2x.webp") type("image/webp") 2x, url("../img/background/promo.webp") type("image/webp") 1x, url("../img/background/promo@2x.jpg") 2x, url("../img/background/promo.jpg") 1x);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+@supports not (background-image: url("../img/background/promo.webp")) {
+  .promo {
+    background-image: url("../img/background/promo.jpg");
+  }
+}
+
+@supports (background-image: url("../img/background/promo.webp")) {
+  .promo {
+    background-image: url("../img/background/promo.webp");
+  }
 }
 
 .promo__wrapper {
@@ -1208,15 +1218,23 @@ form button.focus-visible:focus {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background-image: url("../img/background/advantages.jpg");
-  background-image: -webkit-image-set(url("../img/background/advantages@2x.webp") 2x, url("../img/background/advantages.webp") 1x, url("../img/background/advantages@2x.jpg") 2x, url("../img/background/advantages.jpg") 1x);
-  background-image: -webkit-image-set(url("../img/background/advantages@2x.webp") type("image/webp") 2x, url("../img/background/advantages.webp") type("image/webp") 1x, url("../img/background/advantages@2x.jpg") 2x, url("../img/background/advantages.jpg") 1x);
-  background-image: image-set(url("../img/background/advantages@2x.webp") type("image/webp") 2x, url("../img/background/advantages.webp") type("image/webp") 1x, url("../img/background/advantages@2x.jpg") 2x, url("../img/background/advantages.jpg") 1x);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.1;
   content: "";
+}
+
+@supports not (background-image: url("../img/background/advantages.webp")) {
+  .advantages::before {
+    background-image: url("../img/background/advantages.jpg");
+  }
+}
+
+@supports (background-image: url("../img/background/advantages.webp")) {
+  .advantages::before {
+    background-image: url("../img/background/advantages.webp");
+  }
 }
 
 .advantages h2 {
@@ -1468,12 +1486,22 @@ form button.focus-visible:focus {
   min-height: 555px;
   padding: 50px 40px;
   background-color: #b6dafa;
-  background-image: -webkit-image-set(url("../img/background/booking@2x.webp") type("image/webp") 2x, url("../img/background/booking.webp") type("image/webp") 1x, url("../img/background/booking@2x.jpg") 2x, url("../img/background/booking.jpg") 1x);
-  background-image: image-set(url("../img/background/booking@2x.webp") type("image/webp") 2x, url("../img/background/booking.webp") type("image/webp") 1x, url("../img/background/booking@2x.jpg") 2x, url("../img/background/booking.jpg") 1x);
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
   font-size: 18px;
+}
+
+@supports not (background-image: url("../img/background/booking.webp")) {
+  .booking {
+    background-image: url("../img/background/booking.jpg");
+  }
+}
+
+@supports (background-image: url("../img/background/booking.webp")) {
+  .booking {
+    background-image: url("../img/background/booking.webp");
+  }
 }
 
 .booking h2 {
@@ -2430,4 +2458,42 @@ form button.focus-visible:focus {
   .contacts__info a[href^=tel]:hover:not(.focus-visible) {
     opacity: 0.6;
   }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+@supports not (background-image: url("../img/background/promo@2x.webp")) {
+    .promo {
+      background-image: url("../img/background/promo@2x.jpg");
+    }
+}
+
+@supports (background-image: url("../img/background/promo@2x.webp")) {
+    .promo {
+      background-image: url("../img/background/promo@2x.webp");
+    }
+}
+
+@supports not (background-image: url("../img/background/advantages@2x.webp")) {
+    .advantages::before {
+      background-image: url("../img/background/advantages@2x.jpg");
+    }
+}
+
+@supports (background-image: url("../img/background/advantages@2x.webp")) {
+    .advantages::before {
+      background-image: url("../img/background/advantages@2x.webp");
+    }
+}
+
+@supports not (background-image: url("../img/background/booking@2x.webp")) {
+    .booking {
+      background-image: url("../img/background/booking@2x.jpg");
+    }
+}
+
+@supports (background-image: url("../img/background/booking@2x.webp")) {
+    .booking {
+      background-image: url("../img/background/booking@2x.webp");
+    }
+}
 }

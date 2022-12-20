@@ -13,18 +13,29 @@
     bottom: 0;
     left: 0;
     z-index: -1;
-    background-image:
-      image-set(
-        url("../img/background/advantages@2x.webp") type("image/webp") 2x,
-        url("../img/background/advantages.webp") type("image/webp") 1x,
-        url("../img/background/advantages@2x.jpg") 2x,
-        url("../img/background/advantages.jpg") 1x
-      );
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.1;
     content: "";
+
+    @supports not (background-image: url("../img/background/advantages.webp")) {
+      background-image: url("../img/background/advantages.jpg");
+    }
+
+    @supports (background-image: url("../img/background/advantages.webp")) {
+      background-image: url("../img/background/advantages.webp");
+    }
+
+    @media (min-resolution: 2dppx) {
+      @supports not (background-image: url("../img/background/advantages@2x.webp")) {
+        background-image: url("../img/background/advantages@2x.jpg");
+      }
+
+      @supports (background-image: url("../img/background/advantages@2x.webp")) {
+        background-image: url("../img/background/advantages@2x.webp");
+      }
+    }
   }
 
   h2 {
