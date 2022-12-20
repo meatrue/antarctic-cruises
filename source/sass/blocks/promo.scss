@@ -41,6 +41,24 @@
     min-height: 500px;
     padding: 62px $page-padding-mobile;
     font-size: $fz-base;
+
+    @supports not (background-image: url("../img/background/promo-mobile.webp")) {
+      background-image: url("../img/background/promo-mobile.jpg");
+    }
+
+    @supports (background-image: url("../img/background/promo-mobile.webp")) {
+      background-image: url("../img/background/promo-mobile.webp");
+    }
+
+    @media (min-resolution: 2dppx) {
+      @supports not (background-image: url("../img/background/promo-mobile@2x.webp")) {
+        background-image: url("../img/background/promo-mobile@2x.jpg");
+      }
+
+      @supports (background-image: url("../img/background/promo-mobile@2x.webp")) {
+        background-image: url("../img/background/promo-mobile@2x.webp");
+      }
+    }
   }
 }
 

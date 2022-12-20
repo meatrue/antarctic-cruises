@@ -57,6 +57,24 @@
       font-size: $fz-title-form-mobile;
       line-height: 1.3;
     }
+
+    @supports not (background-image: url("../img/background/booking-mobile.webp")) {
+      background-image: url("../img/background/booking-mobile.jpg");
+    }
+
+    @supports (background-image: url("../img/background/booking-mobile.webp")) {
+      background-image: url("../img/background/booking-mobile.webp");
+    }
+
+    @media (min-resolution: 2dppx) {
+      @supports not (background-image: url("../img/background/booking-mobile@2x.webp")) {
+        background-image: url("../img/background/booking-mobile@2x.jpg");
+      }
+
+      @supports (background-image: url("../img/background/booking-mobile@2x.webp")) {
+        background-image: url("../img/background/booking-mobile@2x.webp");
+      }
+    }
   }
 }
 

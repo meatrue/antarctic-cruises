@@ -55,6 +55,26 @@
     h2 {
       margin-bottom: 31px;
     }
+
+    &::before {
+      @supports not (background-image: url("../img/background/advantages-mobile.webp")) {
+        background-image: url("../img/background/advantages-mobile.jpg");
+      }
+
+      @supports (background-image: url("../img/background/advantages-mobile.webp")) {
+        background-image: url("../img/background/advantages-mobile.webp");
+      }
+
+      @media (min-resolution: 2dppx) {
+        @supports not (background-image: url("../img/background/advantages-mobile@2x.webp")) {
+          background-image: url("../img/background/advantages-mobile@2x.jpg");
+        }
+
+        @supports (background-image: url("../img/background/advantages-mobile@2x.webp")) {
+          background-image: url("../img/background/advantages-mobile@2x.webp");
+        }
+      }
+    }
   }
 }
 
