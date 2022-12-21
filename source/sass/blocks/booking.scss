@@ -9,19 +9,33 @@
 
   @supports not (background-image: url("../img/background/booking.webp")) {
     background-image: url("../img/background/booking.jpg");
+
+    @include vp-767 {
+      background-image: url("../img/background/booking-mobile.jpg");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/booking@2x.jpg");
+
+      @include vp-767 {
+        background-image: url("../img/background/booking-mobile@2x.jpg");
+      }
+    }
   }
 
   @supports (background-image: url("../img/background/booking.webp")) {
     background-image: url("../img/background/booking.webp");
-  }
 
-  @media (min-resolution: 2dppx) {
-    @supports not (background-image: url("../img/background/booking@2x.webp")) {
-      background-image: url("../img/background/booking@2x.jpg");
+    @include vp-767 {
+      background-image: url("../img/background/booking-mobile.webp");
     }
 
-    @supports (background-image: url("../img/background/booking@2x.webp")) {
+    @media (min-resolution: 2dppx) {
       background-image: url("../img/background/booking@2x.webp");
+
+      @include vp-767 {
+        background-image: url("../img/background/booking-mobile@2x.webp");
+      }
     }
   }
 
@@ -56,24 +70,6 @@
       padding: 0 20px;
       font-size: $fz-title-form-mobile;
       line-height: 1.3;
-    }
-
-    @supports not (background-image: url("../img/background/booking-mobile.webp")) {
-      background-image: url("../img/background/booking-mobile.jpg");
-    }
-
-    @supports (background-image: url("../img/background/booking-mobile.webp")) {
-      background-image: url("../img/background/booking-mobile.webp");
-    }
-
-    @media (min-resolution: 2dppx) {
-      @supports not (background-image: url("../img/background/booking-mobile@2x.webp")) {
-        background-image: url("../img/background/booking-mobile@2x.jpg");
-      }
-
-      @supports (background-image: url("../img/background/booking-mobile@2x.webp")) {
-        background-image: url("../img/background/booking-mobile@2x.webp");
-      }
     }
   }
 }

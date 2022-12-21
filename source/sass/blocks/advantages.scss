@@ -21,19 +21,33 @@
 
     @supports not (background-image: url("../img/background/advantages.webp")) {
       background-image: url("../img/background/advantages.jpg");
+
+      @include vp-767 {
+        background-image: url("../img/background/advantages-mobile.jpg");
+      }
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background/advantages@2x.jpg");
+
+        @include vp-767 {
+          background-image: url("../img/background/advantages-mobile@2x.jpg");
+        }
+      }
     }
 
     @supports (background-image: url("../img/background/advantages.webp")) {
       background-image: url("../img/background/advantages.webp");
-    }
 
-    @media (min-resolution: 2dppx) {
-      @supports not (background-image: url("../img/background/advantages@2x.webp")) {
-        background-image: url("../img/background/advantages@2x.jpg");
+      @include vp-767 {
+        background-image: url("../img/background/advantages-mobile.webp");
       }
 
-      @supports (background-image: url("../img/background/advantages@2x.webp")) {
+      @media (min-resolution: 2dppx) {
         background-image: url("../img/background/advantages@2x.webp");
+
+        @include vp-767 {
+          background-image: url("../img/background/advantages-mobile@2x.webp");
+        }
       }
     }
   }
@@ -54,26 +68,6 @@
 
     h2 {
       margin-bottom: 31px;
-    }
-
-    &::before {
-      @supports not (background-image: url("../img/background/advantages-mobile.webp")) {
-        background-image: url("../img/background/advantages-mobile.jpg");
-      }
-
-      @supports (background-image: url("../img/background/advantages-mobile.webp")) {
-        background-image: url("../img/background/advantages-mobile.webp");
-      }
-
-      @media (min-resolution: 2dppx) {
-        @supports not (background-image: url("../img/background/advantages-mobile@2x.webp")) {
-          background-image: url("../img/background/advantages-mobile@2x.jpg");
-        }
-
-        @supports (background-image: url("../img/background/advantages-mobile@2x.webp")) {
-          background-image: url("../img/background/advantages-mobile@2x.webp");
-        }
-      }
     }
   }
 }

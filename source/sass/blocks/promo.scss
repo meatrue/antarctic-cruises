@@ -13,19 +13,33 @@
 
   @supports not (background-image: url("../img/background/promo.webp")) {
     background-image: url("../img/background/promo.jpg");
+
+    @include vp-767 {
+      background-image: url("../img/background/promo-mobile.jpg");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/promo@2x.jpg");
+
+      @include vp-767 {
+        background-image: url("../img/background/promo-mobile@2x.jpg");
+      }
+    }
   }
 
   @supports (background-image: url("../img/background/promo.webp")) {
     background-image: url("../img/background/promo.webp");
-  }
 
-  @media (min-resolution: 2dppx) {
-    @supports not (background-image: url("../img/background/promo@2x.webp")) {
-      background-image: url("../img/background/promo@2x.jpg");
+    @include vp-767 {
+      background-image: url("../img/background/promo-mobile.webp");
     }
 
-    @supports (background-image: url("../img/background/promo@2x.webp")) {
+    @media (min-resolution: 2dppx) {
       background-image: url("../img/background/promo@2x.webp");
+
+      @include vp-767 {
+        background-image: url("../img/background/promo-mobile@2x.webp");
+      }
     }
   }
 
@@ -41,24 +55,6 @@
     min-height: 500px;
     padding: 62px $page-padding-mobile;
     font-size: $fz-base;
-
-    @supports not (background-image: url("../img/background/promo-mobile.webp")) {
-      background-image: url("../img/background/promo-mobile.jpg");
-    }
-
-    @supports (background-image: url("../img/background/promo-mobile.webp")) {
-      background-image: url("../img/background/promo-mobile.webp");
-    }
-
-    @media (min-resolution: 2dppx) {
-      @supports not (background-image: url("../img/background/promo-mobile@2x.webp")) {
-        background-image: url("../img/background/promo-mobile@2x.jpg");
-      }
-
-      @supports (background-image: url("../img/background/promo-mobile@2x.webp")) {
-        background-image: url("../img/background/promo-mobile@2x.webp");
-      }
-    }
   }
 }
 
